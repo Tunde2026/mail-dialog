@@ -6,33 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
     />
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="favicon.ico.png">
-    
-    <meta name="theme-color" content="#2563EB">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJEVTX2306"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-XJEVTX2306');
-    </script>
-    
-   <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="cYWvuh770bY1m-3oUsipAwEahMHSmAYWSfcinGz2Rzc" />
-
-    <!-- SEO -->
-    <title>Mail Dialog – Real-Time Email Messaging Platform</title>
-    <meta property="og:title" content="Mail Dialog">
-    <meta name="description" content="Mail Dialog is a real-time messaging platform that lets users chat, share images, and send files using email addresses instead of phone numbers. No SIM card required—just an email account to connect instantly.">
-
-    <meta name="keywords" content="Mail Dialog, email messaging, real-time chat, Firebase, Cloudinary, messaging app, email chat, file sharing">
-
-    <meta name="author" content="Emmanuel Ajibade">
-    
-    
+    <title>Logic Vision - Connect Workspace</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -43,7 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    
 
     <style>
       /* --- CORPORATE BLUE & WHITE THEMING --- */
@@ -1325,108 +1298,6 @@
         border-radius: 4px;
       }
 
-      .install-popup{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.45);
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:999999;
-
-}
-
-.popup-card{
-
-    width:360px;
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:28px;
-
-    text-align:center;
-
-    box-shadow:0 25px 50px rgba(0,0,0,.25);
-
-}
-
-.popup-logo{
-
-    width:80px;
-
-    height:80px;
-
-    border-radius:18px;
-
-    margin-bottom:18px;
-
-}
-
-.popup-card h2{
-
-    margin-bottom:10px;
-
-    color:#2563EB;
-
-}
-
-.popup-card p{
-
-    line-height:1.6;
-
-    color:#555;
-
-    margin-bottom:25px;
-
-}
-
-.popup-buttons{
-
-    display:flex;
-
-    gap:12px;
-
-}
-
-.popup-buttons button{
-
-    flex:1;
-
-    padding:12px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:15px;
-
-}
-
-#installBtn{
-
-    background:#2563EB;
-
-    color:white;
-
-}
-
-#laterBtn{
-
-    background:#E5E7EB;
-
-}
-      
       /* --- IMAGE LIGHTBOX --- */
       .lightbox-overlay {
         position: fixed;
@@ -1532,6 +1403,303 @@
       .hidden {
         display: none !important;
       }
+      /* ==========================================================
+   Reusable WhatsApp Style Dialog
+========================================================== */
+
+.app-dialog-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    backdrop-filter:blur(6px);
+
+    animation:fadeIn .18s ease;
+
+}
+
+.hidden{
+
+    display:none!important;
+
+}
+
+.app-dialog{
+
+    width:min(92%,430px);
+
+    background:var(--surface,#ffffff);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.25);
+
+    animation:dialogPop .18s ease;
+
+}
+
+.app-dialog-header{
+
+    padding:20px;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+.app-dialog-body{
+
+    padding:20px;
+
+}
+
+.app-dialog-body p{
+
+    margin-bottom:15px;
+
+    line-height:1.6;
+
+}
+
+#appDialogInput{
+
+    width:100%;
+
+    min-height:120px;
+
+    resize:vertical;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+   WhatsApp Style Bottom Sheet
+========================================================== */
+
+.bottom-sheet{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    background:var(--surface,#fff);
+
+    border-radius:24px 24px 0 0;
+
+    padding:18px;
+
+    animation:bottomSheetUp .25s ease;
+
+    box-shadow:0 -10px 40px rgba(0,0,0,.18);
+
+}
+
+.bottom-sheet-header{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.bottom-sheet-handle{
+
+    width:55px;
+
+    height:5px;
+
+    background:#cfcfcf;
+
+    border-radius:100px;
+
+    margin:auto;
+
+    margin-bottom:12px;
+
+}
+
+.bottom-sheet-header h4{
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+#bottomSheetActions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.sheet-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    border:none;
+
+    background:#f5f5f5;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.18s;
+
+}
+
+.sheet-action:hover{
+
+    background:#eaeaea;
+
+    transform:translateY(-1px);
+
+}
+
+.sheet-action.delete{
+
+    color:#d93025;
+
+}
+
+.sheet-action.delete:hover{
+
+    background:#ffe7e7;
+
+}
+
+@keyframes bottomSheetUp{
+
+    from{
+
+        transform:translateY(100%);
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.app-dialog-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    padding:18px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+.dialog-btn{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.dialog-btn.primary{
+
+    background:#25D366;
+
+    color:white;
+
+}
+
+.dialog-btn.secondary{
+
+    background:#e6e6e6;
+
+}
+
+@keyframes dialogPop{
+
+    from{
+
+        transform:scale(.85);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
     </style>
   </head>
   <body>
@@ -1915,29 +2083,72 @@
       <img id="lightboxImage" src="" alt="Full size preview" />
     </div>
 
-    <div class="toast" id="globalToast">Notification</div>
 
-    <div id="installPopup" class="install-popup">
+    <!-- ===========================================
+     Reusable WhatsApp Style Dialog System
+     Used for:
+     - Edit Message
+     - Delete Message
+     - Confirmations
+     - Future dialogs
+============================================ -->
 
-    <div class="popup-card">
+<div id="appDialogOverlay" class="app-dialog-overlay hidden">
 
-        <img src="favicon.ico.png" class="popup-logo">
+    <div class="app-dialog">
 
-        <h2>Install MailDialog</h2>
+        <div class="app-dialog-header">
 
-        <p>
-            Install MailDialog for a faster and smoother messaging experience.
-            Access your chats directly from your desktop or home screen.
-        </p>
+            <h3 id="appDialogTitle"></h3>
 
-        <div class="popup-buttons">
+        </div>
 
-            <button id="installBtn">
-                Install
+        <div class="app-dialog-body">
+
+            <p id="appDialogMessage"></p>
+
+            <textarea
+                id="appDialogInput"
+                class="hidden"
+                rows="4"
+                placeholder="Type here..."
+            ></textarea>
+
+            <!-- Bottom Sheet Action Menu -->
+
+          <div
+              id="appDialogChoices"
+              class="bottom-sheet hidden"
+          >
+          
+              <div class="bottom-sheet-header">
+          
+                  <div class="bottom-sheet-handle"></div>
+          
+                  <h4>Select an Action</h4>
+          
+              </div>
+          
+              <div id="bottomSheetActions"></div>
+          
+          </div>
+
+        </div>
+
+        <div class="app-dialog-footer">
+
+            <button
+                id="dialogCancelBtn"
+                class="dialog-btn secondary"
+            >
+                Cancel
             </button>
 
-            <button id="laterBtn">
-                Maybe Later
+            <button
+                id="dialogOkBtn"
+                class="dialog-btn primary"
+            >
+                OK
             </button>
 
         </div>
@@ -1945,13 +2156,18 @@
     </div>
 
 </div>
+    
+    <div class="toast" id="globalToast">Notification</div>
+
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
       import {
         getAuth,
         onAuthStateChanged,
         signOut,
       } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+      
       import {
         getFirestore,
         doc,
@@ -1960,23 +2176,36 @@
         updateDoc,
         deleteDoc,
         collection,
+        collectionGroup,
         query,
         where,
+        and,
+        or,
         getDocs,
+        getDocFromCache,
         addDoc,
         orderBy,
         limit,
+        limitToLast,
+        startAfter,
+        startAt,
+        endAt,
         onSnapshot,
         serverTimestamp,
         increment,
         deleteField,
         writeBatch,
+        runTransaction,
+        arrayUnion,
+        arrayRemove,
       } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+      
       import {
         getStorage,
         ref,
         uploadBytesResumable,
         getDownloadURL,
+        deleteObject,
       } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
       // Your specific web app's Firebase configuration
@@ -2018,6 +2247,44 @@
       let pendingAttachment = null; // { file, classifiedType }
       let contextMenuTargetChatId = null;
       let contextMenuTargetChatData = null;
+
+      // BUGFIX (message list jump/flicker + "never recreate entire DOM"):
+      // The original renderMessageList() wiped chatMessagesDisplay with
+      // innerHTML = "" and rebuilt every message row from scratch on every
+      // single Firestore snapshot — including snapshots triggered by
+      // something as small as one reaction or one read-receipt flip. That
+      // caused three separate visible problems: (1) every message flickered
+      // on every update, (2) images/videos got torn down and re-fetched
+      // constantly, and (3) the view was force-scrolled to the bottom every
+      // time, yanking the user back down even if they had scrolled up to
+      // read older history. This map lets renderMessageList() recognize
+      // which messages are unchanged and leave their DOM nodes completely
+      // untouched, only building/replacing the ones that actually changed.
+      let renderedMessageNodes = new Map(); // msgId -> { node, signature }
+
+      // BUGFIX (duplicate Firestore listeners / memory leak):
+      // renderRecentChatItemCard() attaches one onSnapshot() per visible
+      // chat row to track that contact's online/offline dot. The chat list
+      // re-renders from scratch every time the parent "chats" listener
+      // fires (i.e. on every message, pin, archive, mute toggle...), so
+      // without explicit teardown these listeners piled up indefinitely —
+      // each re-render left the previous batch subscribed forever, quietly
+      // multiplying Firestore reads and memory usage the longer a session
+      // ran. We track every active per-row unsubscribe function here so
+      // renderChatListFromCache() can cleanly dispose of the old batch
+      // before creating the next one.
+      let activeChatRowPresenceUnsubscribes = [];
+
+      function disposeChatRowPresenceListeners() {
+        activeChatRowPresenceUnsubscribes.forEach((unsubscribe) => {
+          try {
+            unsubscribe();
+          } catch (e) {
+            // Already-detached listeners are harmless to ignore.
+          }
+        });
+        activeChatRowPresenceUnsubscribes = [];
+      }
 
       const COMMON_EMOJIS = [
         "😀",
@@ -2636,6 +2903,12 @@
           return aMeta.displayName.localeCompare(bMeta.displayName);
         });
 
+        // Dispose of the previous render's per-row presence listeners
+        // *before* wiping the container — otherwise every re-render leaves
+        // the old batch of onSnapshot() subscriptions dangling with no
+        // reference left to unsubscribe them later. See the declaration of
+        // activeChatRowPresenceUnsubscribes above for the full explanation.
+        disposeChatRowPresenceListeners();
         chatListContainer.innerHTML = "";
 
         if (entries.length === 0) {
@@ -2706,7 +2979,7 @@
             collection(db, "users"),
             where("email", "==", otherEmail),
           );
-          onSnapshot(usersQuery, (snapshot) => {
+          const unsubscribeRowPresence = onSnapshot(usersQuery, (snapshot) => {
             if (snapshot.empty) return;
             const currentMeta = snapshot.docs[0].data();
             const escapedEmail = CSS.escape(otherEmail);
@@ -2720,6 +2993,9 @@
               );
             }
           });
+          // Track this row's listener so the next renderChatListFromCache()
+          // call can dispose of it cleanly instead of leaking it.
+          activeChatRowPresenceUnsubscribes.push(unsubscribeRowPresence);
         }
 
         chatItemRow.addEventListener("click", (e) => {
@@ -3138,30 +3414,35 @@
       /* =========================================================
                MESSAGE LIST RENDERING
                ========================================================= */
-      function renderMessageList() {
-        chatMessagesDisplay.innerHTML = "";
+      // Builds a compact string capturing every piece of message data that
+      // affects its rendered markup. Two snapshots of the same message with
+      // an identical signature would produce byte-identical HTML, so if a
+      // cached row's signature hasn't changed we can safely skip rebuilding
+      // it — this is the core of the incremental-rendering fix described
+      // above (avoids the flicker/scroll-jump caused by full DOM teardown).
+      function computeMessageSignature(currentMessage, isStarred) {
+        return JSON.stringify([
+          currentMessage.text,
+          currentMessage.type,
+          currentMessage.fileURL,
+          currentMessage.fileName,
+          currentMessage.fileSize,
+          currentMessage.deleted,
+          currentMessage.edited,
+          currentMessage.status,
+          currentMessage.reactions,
+          currentMessage.replyTo,
+          isStarred,
+        ]);
+      }
 
-        if (currentMessagesCache.length === 0) {
-          chatMessagesDisplay.innerHTML = `
-                  <div class="no-chat-fallback" style="height:100%;">
-                    <i class="fa-regular fa-comments"></i>
-                    <h3>No messages yet</h3>
-                    <p>Send the first message to start this conversation.</p>
-                  </div>`;
-          return;
-        }
-
-        currentMessagesCache.forEach(({ id: msgId, data: currentMessage }) => {
+      // Builds one message row's DOM node. Extracted out of
+      // renderMessageList() so it can be invoked either for a brand-new
+      // message or to rebuild a single row whose data actually changed,
+      // without touching any of the other (unchanged) rows.
+      function buildMessageRowNode(msgId, currentMessage) {
           const isOutgoing =
             currentMessage.senderEmail === currentUserEmailNormalized;
-
-          // Respect "delete for me": skip rendering entirely for this viewer.
-          if (
-            Array.isArray(currentMessage.deletedFor) &&
-            currentMessage.deletedFor.includes(currentUserEmailNormalized)
-          ) {
-            return;
-          }
 
           const rowNode = document.createElement("div");
           rowNode.className = `message-row ${isOutgoing ? "out" : "in"}`;
@@ -3267,10 +3548,109 @@
                     </div>
                   </div>
                 `;
-          chatMessagesDisplay.appendChild(rowNode);
+          return rowNode;
+      }
+
+      // BUGFIX (see renderedMessageNodes declaration above for the full
+      // rationale): incremental, non-destructive message list rendering.
+      //
+      // Instead of wiping chatMessagesDisplay and rebuilding every row on
+      // every snapshot, this:
+      //   1. Computes a lightweight signature per message.
+      //   2. Reuses a message's existing DOM node untouched if its
+      //      signature hasn't changed (huge win: no flicker, no re-fetch of
+      //      images/videos, no lost text selection on unrelated rows).
+      //   3. Rebuilds only the rows that actually changed (e.g. a new
+      //      reaction, an edit, a read-receipt flip).
+      //   4. Repositions nodes only when their order actually differs from
+      //      what's already in the DOM (cheap no-op check via nextSibling).
+      //   5. Only force-scrolls to the bottom if the viewer was already
+      //      near the bottom before the update — someone scrolled up to
+      //      read history is left exactly where they are ("smart
+      //      auto-scroll" / "preserve scroll" from the spec).
+      function renderMessageList() {
+        const viewerEmail = currentUserEmailNormalized;
+
+        // Respect "delete for me": this viewer simply never sees these.
+        const visibleMessages = currentMessagesCache.filter(
+          ({ data }) =>
+            !(
+              Array.isArray(data.deletedFor) &&
+              data.deletedFor.includes(viewerEmail)
+            ),
+        );
+
+        if (visibleMessages.length === 0) {
+          chatMessagesDisplay.innerHTML = `
+                  <div class="no-chat-fallback" style="height:100%;">
+                    <i class="fa-regular fa-comments"></i>
+                    <h3>No messages yet</h3>
+                    <p>Send the first message to start this conversation.</p>
+                  </div>`;
+          renderedMessageNodes.clear();
+          return;
+        }
+
+        // Clear the "no messages yet" placeholder the first time a message
+        // actually arrives — it's not a tracked node, so the diffing loop
+        // below wouldn't otherwise remove it.
+        if (
+          renderedMessageNodes.size === 0 &&
+          chatMessagesDisplay.querySelector(".no-chat-fallback")
+        ) {
+          chatMessagesDisplay.innerHTML = "";
+        }
+
+        // Was the viewer already at (or very near) the bottom before this
+        // update? Captured before we touch the DOM.
+        const distanceFromBottom =
+          chatMessagesDisplay.scrollHeight -
+          chatMessagesDisplay.scrollTop -
+          chatMessagesDisplay.clientHeight;
+        const wasNearBottom = distanceFromBottom < 120;
+
+        // Drop cached nodes for messages that are no longer visible (e.g.
+        // this viewer just chose "delete for me", or the doc was removed).
+        const visibleIds = new Set(visibleMessages.map((m) => m.id));
+        for (const [cachedId, entry] of renderedMessageNodes) {
+          if (!visibleIds.has(cachedId)) {
+            entry.node.remove();
+            renderedMessageNodes.delete(cachedId);
+          }
+        }
+
+        let previousNode = null;
+        visibleMessages.forEach(({ id: msgId, data: currentMessage }) => {
+          const isStarred = Array.isArray(currentMessage.starredBy)
+            ? currentMessage.starredBy.includes(viewerEmail)
+            : false;
+          const signature = computeMessageSignature(currentMessage, isStarred);
+          const cached = renderedMessageNodes.get(msgId);
+
+          let rowNode;
+          if (cached && cached.signature === signature) {
+            // Untouched: reuse the exact same DOM node.
+            rowNode = cached.node;
+          } else {
+            rowNode = buildMessageRowNode(msgId, currentMessage);
+            renderedMessageNodes.set(msgId, { node: rowNode, signature });
+          }
+
+          // Only move the node if it isn't already in the right spot —
+          // avoids unnecessary reflow for rows that are already correctly
+          // ordered.
+          const expectedNextSibling = previousNode
+            ? previousNode.nextSibling
+            : chatMessagesDisplay.firstChild;
+          if (expectedNextSibling !== rowNode) {
+            chatMessagesDisplay.insertBefore(rowNode, expectedNextSibling);
+          }
+          previousNode = rowNode;
         });
 
-        chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight;
+        if (wasNearBottom) {
+          chatMessagesDisplay.scrollTop = chatMessagesDisplay.scrollHeight;
+        }
       }
 
       /* Delegate all per-message action bar clicks and reaction pill clicks. */
@@ -3514,32 +3894,59 @@
         }
       }
 
-      async function toggleStarMessage(msgId, messageData) {
-        if (!activeChatId) return;
-        const msgRef = doc(db, "chats", activeChatId, "messages", msgId);
-        const starredBy = messageData.starredBy || [];
-        const alreadyStarred = starredBy.includes(currentUserEmailNormalized);
+     /**
+ * Toggle the starred state of a message.
+ *
+ * This function safely adds or removes the current user's email
+ * from the `starredBy` array using Firestore's atomic array operations.
+ *
+ * Why use arrayUnion() and arrayRemove()?
+ * ---------------------------------------
+ * - Prevents duplicate entries.
+ * - Prevents race conditions when multiple users update at once.
+ * - Eliminates the need to manually rebuild the array.
+ * - Recommended by Firebase for array updates.
+ */
+async function toggleStarMessage(msgId, messageData) {
+  // Ensure there is an active conversation.
+  if (!activeChatId) return;
 
-        try {
-          if (alreadyStarred) {
-            await updateDoc(msgRef, {
-              starredBy: starredBy.filter(
-                (e) => e !== currentUserEmailNormalized,
-              ),
-            });
-          } else {
-            await updateDoc(msgRef, {
-              starredBy: [...starredBy, currentUserEmailNormalized],
-            });
-          }
-          showToastNotification(
-            alreadyStarred ? "Removed from starred." : "Message starred.",
-            false,
-          );
-        } catch (e) {
-          showToastNotification("Could not update star.");
-        }
-      }
+  // Reference to the message document.
+  const msgRef = doc(db, "chats", activeChatId, "messages", msgId);
+
+  // Existing users who have starred this message.
+  const starredBy = messageData.starredBy || [];
+
+  // Check whether the current user has already starred it.
+  const alreadyStarred = starredBy.includes(currentUserEmailNormalized);
+
+  try {
+    if (alreadyStarred) {
+      // Remove current user from starred list.
+      await updateDoc(msgRef, {
+        starredBy: arrayRemove(currentUserEmailNormalized)
+      });
+
+      showToastNotification("Removed from starred.", false);
+
+    } else {
+      // Add current user to starred list.
+      await updateDoc(msgRef, {
+        starredBy: arrayUnion(currentUserEmailNormalized)
+      });
+
+      showToastNotification("Message starred.", false);
+    }
+
+  } catch (error) {
+    console.error("Error updating starred message:", error);
+
+    showToastNotification(
+      "Unable to update the starred message. Please try again.",
+      true
+    );
+  }
+}
 
       function beginEditMessage(msgId, messageData) {
         if (messageData.senderEmail !== currentUserEmailNormalized) {
@@ -3551,67 +3958,508 @@
           return;
         }
 
-        const refinedString = prompt(
-          "Edit your message:",
-          messageData.text || "",
-        );
-        if (refinedString === null) return;
-        const cleaned = sanitizeInputText(refinedString);
-        if (!cleaned) return;
 
-        updateDoc(doc(db, "chats", activeChatId, "messages", msgId), {
-          text: cleaned,
-          edited: true,
-        })
-          .then(() => showToastNotification("Message updated.", false))
-          .catch(() => showToastNotification("Update rejected."));
+        /* ==========================================================
+   Reusable WhatsApp-Style Dialog Engine
+   ----------------------------------------------------------
+   This dialog system replaces:
+   - prompt()
+   - confirm()
+   - simple choice prompts
+
+   Functions provided:
+   • showInputDialog()
+   • showConfirmDialog()
+   • showChoiceDialog()
+
+   Every function returns a Promise, allowing usage like:
+
+   const value = await showInputDialog(...);
+
+   ========================================================== */
+
+const dialogOverlay = document.getElementById("appDialogOverlay");
+const dialogTitle = document.getElementById("appDialogTitle");
+const dialogMessage = document.getElementById("appDialogMessage");
+const dialogInput = document.getElementById("appDialogInput");
+const dialogChoices = document.getElementById("appDialogChoices");
+
+const dialogOkBtn = document.getElementById("dialogOkBtn");
+const dialogCancelBtn = document.getElementById("dialogCancelBtn");
+
+let dialogResolver = null;
+
+/**
+ * Close dialog and reset UI.
+ */
+function closeDialog(result = null) {
+
+    dialogOverlay.classList.add("hidden");
+
+    dialogInput.classList.add("hidden");
+    dialogChoices.classList.add("hidden");
+
+    dialogInput.value = "";
+    dialogChoices.innerHTML = "";
+
+    if (dialogResolver) {
+        dialogResolver(result);
+        dialogResolver = null;
+    }
+}
+
+/**
+ * Opens dialog shell.
+ */
+function openDialog() {
+
+    dialogOverlay.classList.remove("hidden");
+
+    dialogInput.classList.add("hidden");
+    dialogChoices.classList.add("hidden");
+
+    dialogMessage.textContent = "";
+
+    dialogOkBtn.style.display = "";
+    dialogCancelBtn.style.display = "";
+}
+
+/* ==========================================================
+   INPUT DIALOG
+========================================================== */
+
+async function showInputDialog({
+
+    title = "",
+    message = "",
+    value = "",
+    placeholder = ""
+
+}) {
+
+    openDialog();
+
+    dialogTitle.textContent = title;
+    dialogMessage.textContent = message;
+
+    dialogInput.classList.remove("hidden");
+
+    dialogInput.placeholder = placeholder;
+
+    dialogInput.value = value;
+
+    dialogInput.focus();
+
+    dialogInput.select();
+
+    return new Promise(resolve => {
+
+        dialogResolver = resolve;
+
+        dialogOkBtn.onclick = () => {
+
+            closeDialog(dialogInput.value);
+
+        };
+
+        dialogCancelBtn.onclick = () => {
+
+            closeDialog(null);
+
+        };
+
+    });
+
+}
+
+/* ==========================================================
+   CONFIRM DIALOG
+========================================================== */
+
+async function showConfirmDialog({
+
+    title = "",
+    message = ""
+
+}) {
+
+    openDialog();
+
+    dialogTitle.textContent = title;
+
+    dialogMessage.textContent = message;
+
+    return new Promise(resolve => {
+
+        dialogResolver = resolve;
+
+        dialogOkBtn.onclick = () => {
+
+            closeDialog(true);
+
+        };
+
+        dialogCancelBtn.onclick = () => {
+
+            closeDialog(false);
+
+        };
+
+    });
+
+}
+
+/* ==========================================================
+   CHOICE DIALOG
+========================================================== */
+
+/**
+ * ==========================================================
+ * WhatsApp Style Bottom Sheet
+ * ----------------------------------------------------------
+ * Displays a mobile-friendly action menu that slides up from
+ * the bottom of the screen.
+ *
+ * Returns:
+ *   option.id
+ *   OR
+ *   null (cancelled)
+ * ==========================================================
+ */
+async function showChoiceDialog({
+
+    title = "",
+    options = []
+
+}) {
+
+    openDialog();
+
+    dialogTitle.textContent = "";
+
+    dialogMessage.textContent = "";
+
+    dialogChoices.classList.remove("hidden");
+
+    dialogOkBtn.style.display = "none";
+
+    dialogCancelBtn.style.display = "none";
+
+    const container =
+        document.getElementById("bottomSheetActions");
+
+    container.innerHTML = "";
+
+    return new Promise(resolve => {
+
+        dialogResolver = resolve;
+
+        options.forEach(option => {
+
+            const button =
+                document.createElement("button");
+
+            button.className =
+                "sheet-action";
+
+            if(option.danger){
+
+                button.classList.add("delete");
+
+            }
+
+            button.innerHTML = `
+                <span style="font-size:20px;">
+                    ${option.icon ?? ""}
+                </span>
+
+                <span>
+                    ${option.label}
+                </span>
+            `;
+
+            button.onclick = () => {
+
+                closeDialog(option.id);
+
+            };
+
+            container.appendChild(button);
+
+        });
+
+        /* Cancel by tapping outside */
+
+        dialogOverlay.onclick = e => {
+
+            if(e.target === dialogOverlay){
+
+                closeDialog(null);
+
+            }
+
+        };
+
+    });
+
+}
+/* ==========================================================
+   EXTRA FEATURES
+========================================================== */
+
+/* Close dialog when clicking outside */
+
+dialogOverlay.addEventListener("click", (event) => {
+
+    if (event.target === dialogOverlay) {
+
+        closeDialog(null);
+
+    }
+
+});
+
+/* Escape key closes dialog */
+
+document.addEventListener("keydown", (event) => {
+
+    if (
+        event.key === "Escape" &&
+        !dialogOverlay.classList.contains("hidden")
+    ) {
+
+        closeDialog(null);
+
+    }
+
+});
+
+/* Ctrl + Enter submits input dialog */
+
+dialogInput.addEventListener("keydown", (event) => {
+
+    if (
+        event.key === "Enter" &&
+        event.ctrlKey
+    ) {
+
+        dialogOkBtn.click();
+
+    }
+
+});
+        
+        /**
+ * Edit an existing message.
+ *
+ * This function opens a custom input dialog (to be implemented later)
+ * allowing the sender to modify the message text.
+ *
+ * Improvements:
+ * - Uses async/await.
+ * - Prevents empty messages.
+ * - Prevents unnecessary Firestore writes.
+ * - Sanitizes user input.
+ * - Better error handling.
+ */
+async function editMessage(msgId, messageData) {
+  if (!activeChatId) return;
+
+  try {
+    // Custom dialog (we'll build this later)
+    const refinedString = await showInputDialog({
+      title: "Edit Message",
+      value: messageData.text || "",
+      placeholder: "Type your message..."
+    });
+
+    // User cancelled.
+    if (refinedString === null) return;
+
+    const cleaned = sanitizeInputText(refinedString);
+
+    if (!cleaned) {
+      showToastNotification("Message cannot be empty.", true);
+      return;
+    }
+
+    // Prevent unnecessary update
+    if (cleaned === messageData.text) {
+      showToastNotification("Nothing changed.", false);
+      return;
+    }
+
+    await updateDoc(
+      doc(db, "chats", activeChatId, "messages", msgId),
+      {
+        text: cleaned,
+        edited: true,
+        editedAt: serverTimestamp()
       }
+    );
 
-      function openDeleteMessageChoice(msgId, messageData) {
-        const isMine = messageData.senderEmail === currentUserEmailNormalized;
-        if (!isMine) {
-          if (!confirm("Delete this message for you only?")) return;
-          deleteMessageForMe(msgId, messageData);
-          return;
+    showToastNotification("Message updated.", false);
+
+  } catch (error) {
+    console.error("Edit message failed:", error);
+    showToastNotification("Unable to edit message.", true);
+  }
+}
+
+
+/**
+ * Opens the delete options dialog.
+ *
+ * If the current user owns the message,
+ * they may choose:
+ *
+ * • Delete for Me
+ * • Delete for Everyone
+ *
+ * Otherwise,
+ * only Delete for Me is available.
+ */
+async function openDeleteMessageChoice(msgId, messageData) {
+
+  const isMine =
+    messageData.senderEmail === currentUserEmailNormalized;
+
+  try {
+
+    if (!isMine) {
+
+      const confirmed = await showConfirmDialog({
+        title: "Delete Message",
+        message: "Delete this message for you only?"
+      });
+
+      if (!confirmed) return;
+
+      await deleteMessageForMe(msgId);
+
+      return;
+    }
+
+    // Custom choice dialog (we'll build later)
+
+    const choice = await showChoiceDialog({
+
+    title:"Delete Message",
+
+    options:[
+
+        {
+
+            id:"me",
+
+            label:"Delete for Me",
+
+            icon:"🗑️"
+
+        },
+
+        {
+
+            id:"everyone",
+
+            label:"Delete for Everyone",
+
+            icon:"🚫",
+
+            danger:true
+
         }
 
-        const choice = prompt(
-          'Type "1" to delete for me only, or "2" to delete for everyone:',
-          "1",
-        );
-        if (choice === "2") {
-          deleteMessageForEveryone(msgId);
-        } else if (choice === "1") {
-          deleteMessageForMe(msgId, messageData);
-        }
-      }
+    ]
 
-      async function deleteMessageForMe(msgId, messageData) {
-        const msgRef = doc(db, "chats", activeChatId, "messages", msgId);
-        const deletedFor = messageData.deletedFor || [];
-        try {
-          await updateDoc(msgRef, {
-            deletedFor: [...deletedFor, currentUserEmailNormalized],
-          });
-          showToastNotification("Message removed for you.", false);
-        } catch (e) {
-          showToastNotification("Deletion exception error.");
-        }
-      }
+});
 
-      async function deleteMessageForEveryone(msgId) {
-        try {
-          await updateDoc(doc(db, "chats", activeChatId, "messages", msgId), {
-            deleted: true,
-            text: "",
-            fileURL: null,
-          });
-          showToastNotification("Message deleted for everyone.", false);
-        } catch (e) {
-          showToastNotification("Deletion exception error.");
-        }
-      }
 
+/**
+ * Deletes the message only for the current user.
+ *
+ * Uses Firestore's atomic array update
+ * to avoid race conditions.
+ */
+async function deleteMessageForMe(msgId) {
+
+  if (!activeChatId) return;
+
+  try {
+
+    await updateDoc(
+      doc(db, "chats", activeChatId, "messages", msgId),
+      {
+        deletedFor: arrayUnion(
+          currentUserEmailNormalized
+        )
+      }
+    );
+
+    showToastNotification(
+      "Message removed for you.",
+      false
+    );
+
+  } catch (error) {
+
+    console.error(error);
+
+    showToastNotification(
+      "Could not delete message.",
+      true
+    );
+
+  }
+
+}
+
+
+/**
+ * Deletes the message for every participant.
+ *
+ * Instead of removing the document,
+ * we soft-delete it so replies,
+ * timestamps and chat history remain intact.
+ */
+async function deleteMessageForEveryone(msgId) {
+
+  if (!activeChatId) return;
+
+  try {
+
+    await updateDoc(
+      doc(db, "chats", activeChatId, "messages", msgId),
+      {
+        deleted: true,
+        deletedAt: serverTimestamp(),
+        text: "",
+        caption: "",
+        fileURL: null,
+        thumbnailURL: null,
+        fileName: "",
+        fileType: "",
+        fileSize: 0
+      }
+    );
+
+    showToastNotification(
+      "Message deleted for everyone.",
+      false
+    );
+
+  } catch (error) {
+
+    console.error(error);
+
+    showToastNotification(
+      "Could not delete message.",
+      true
+    );
+
+  }
+
+}
       /* =========================================================
                STARRED MESSAGES MODAL
                ========================================================= */
@@ -4120,49 +4968,6 @@
       document.addEventListener("DOMContentLoaded", () => {
         initializeThemeEngine();
       });
-
-      if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js")
-            .then(() => console.log("Service Worker Registered"))
-            .catch(err => console.log(err));
-    });
-}
-      let deferredPrompt;
-
-const popup = document.getElementById("installPopup");
-
-const installBtn = document.getElementById("installBtn");
-
-const laterBtn = document.getElementById("laterBtn");
-
-window.addEventListener("beforeinstallprompt", (e)=>{
-
-    e.preventDefault();
-
-    deferredPrompt = e;
-
-    popup.style.display="flex";
-
-});
-
-installBtn.addEventListener("click", async()=>{
-
-    popup.style.display="none";
-
-    deferredPrompt.prompt();
-
-    const choice = await deferredPrompt.userChoice;
-
-    deferredPrompt = null;
-
-});
-
-laterBtn.onclick=()=>{
-
-    popup.style.display="none";
-
-}
     </script>
   </body>
 </html>
